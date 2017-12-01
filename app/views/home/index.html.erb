@@ -1,0 +1,60 @@
+<%= render "layouts/header" %>
+<div class="container page-content">
+    <h1>insta rip site</h1>
+    <% @lists.each do|id, name, desc, image| %>
+        <div class="list-content col-xs-6">
+
+            <div class="list-image">
+                <img src="<%= image %>">
+            </div>
+            <hr>
+            <div class="list-info">
+                <span> foto naam:<i><%= name %></i></span>
+                <br>
+                <b>foto beschrijving:<i><%= desc %></i></b>
+            </div>
+            <hr>
+
+            <div class="list-settings">
+                <form method="post" action="change">
+                    <input type="hidden" id="id" name="id" value="<%= id %>">
+                    <div class="update-list">
+                        <div class="update-info">
+                            <table width="100%">
+                                <tr>
+                                    <td>Name:</td>
+                                    <td><input class="form-control" placeholder="leave blank if no new value" type="text" name="new_name"></td>
+                                </tr>
+                                <tr>
+                                    <td>Description:</td>
+                                    <td><textarea class="form-control" placeholder="leave blank if no new value" name="new_description"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>Image:</td>
+                                    <td><input class="form-control" placeholder="leave blank if no new value" type="text" name="new_image"></td>
+                                </tr>
+                            </table>
+                        </div>
+                            <button class="update-btn btn btn-succes" name="update"><i class="	glyphicon glyphicon-chevron-right"></i><hr><b>Send</b></button>
+                    </div>
+                    <div class="list-settings-btn">
+                        <button id="update" type="button" class="update btn"><i class="glyphicon glyphicon-refresh col-xs-6"></i></button>
+                        <button name="delete" class="btn"><i class="glyphicon glyphicon-trash col-xs-6"></i></button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    <% end %>
+
+    <asside class="side-content">
+        <button class="btn btn-succes"><a href="/new">add list</a></button>
+        <nav>
+            <button>andere weergave</button><br>
+            <button>andere weergave</button><br>
+            <button>andere weergave</button><br>
+        </nav>
+    </asside>
+
+</div>
+<%= render "layouts/footer" %>

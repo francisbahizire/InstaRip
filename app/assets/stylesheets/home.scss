@@ -1,0 +1,57 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.page-content{
+    text-align: center;
+    .list-content{
+        border: 1px solid black;
+        height: 600px;
+        width: 40%;
+        border-radius: 3px;
+        padding: 2% 0px;
+        margin: 2px;
+        img{
+            width: 75%;
+        }
+        .update-list{
+            display: none;
+            width: 100%;
+            padding: 0px 10px;
+            .update-info{
+                width: 73%; 
+                float: left;
+                    td{
+                        text-align: left;
+                        input, textarea{
+                            width: 100%;
+                    }
+                }
+            }
+            .update-btn{
+                float: right;
+                width: 25%;
+                i{
+                    font-size: 50px;
+                }
+                hr{
+                    margin: 0px;
+                }
+
+               
+            }
+        
+        }
+        .list-settings-btn{
+            position: absolute;
+            bottom: 1px;
+            width: 100%;
+            height: 10%;
+            button{
+                font-size: 150%;
+                height: 100%;
+                width: 49%;
+            }
+        }
+    }
+
+}
